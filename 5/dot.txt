@@ -1,0 +1,29 @@
+digraph "Mike's Bellman-Ford Solver" 
+{
+	labelloc = "t";
+	label = "Mike's Bellman-Ford Solver";
+
+	"V1" [color=black];
+	"V10" [color=black];
+	"V2" [color=black];
+	"V3" [color=black];
+	"V4" [color=black];
+	"V7" [color=black];
+
+	"V4" -> "V3"[label=2,fontcolor=black][color=black];
+	"V3" -> "V4"[label=8,fontcolor=black][color=black];
+	"V10" -> "V3"[label=8,fontcolor=black][color=black];
+	"V2" -> "V4"[label=5,fontcolor=black][color=black];
+	"V1" -> "V3"[label=6,fontcolor=black][color=black];
+	"V7" -> "V10"[label=2,fontcolor=black][color=black];
+	"V1" -> "V7"[label=9,fontcolor=black][color=black];
+	"V10" -> "V7"[label=8,fontcolor=black][color=black];
+	"V4" -> "V1"[label=6,fontcolor=black][color=black];
+	"V2" -> "V1"[label=9,fontcolor=black][color=black];
+	"V7" -> "V3"[label=3,fontcolor=black][color=black];
+	"V3" -> "V10"[label=8,fontcolor=black][color=black];
+	"V1" -> "V10"[label=10,fontcolor=black][color=black];
+	"V2" -> "V3"[label=10,fontcolor=black][color=black];
+	"V3" -> "V1"[label=10,fontcolor=black][color=black];
+	"V1" -> "V2"[label=8,fontcolor=black][color=black];
+}

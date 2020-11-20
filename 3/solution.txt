@@ -1,0 +1,157 @@
+
+Mike's BFM Tutor: Begin solving
+
+Vertices: ['V1', 'V2', 'V3', 'V4', 'V5', 'V6']
+
+Adjacency matrix:
++----+------+------+------+------+------+------+
+|    | V1   | V2   | V3   | V4   | V5   | V6   |
++====+======+======+======+======+======+======+
+| V1 | -    | 10   | -    | -    | 6    | 9    |
++----+------+------+------+------+------+------+
+| V2 | 4    | -    | 2    | -    | 4    | 10   |
++----+------+------+------+------+------+------+
+| V3 | -    | 3    | -    | -    | 4    | -    |
++----+------+------+------+------+------+------+
+| V4 | -    | -    | 2    | -    | 1    | -    |
++----+------+------+------+------+------+------+
+| V5 | -    | -    | 9    | 10   | -    | 9    |
++----+------+------+------+------+------+------+
+| V6 | -    | -    | -    | -    | 10   | -    |
++----+------+------+------+------+------+------+
+
+Solving for source vertex: V4
+
+Initializing solution
+Set distance[V4] = 0
+Set penultimate[V4] = V4
+
+* Begin relaxation sweep 1 of 6
+
+Relaxing path to vertex V3 through V4
+> Old distance = inf
+> New distance = 2 (distance to V4 = 0, with hop to V3 = 2)
+Set distance[V3] = 2
+Set penultimate[V3] = V4
+
+Relaxing path to vertex V5 through V3
+> Old distance = inf
+> New distance = 6 (distance to V3 = 2, with hop to V5 = 4)
+Set distance[V5] = 6
+Set penultimate[V5] = V3
+
+Relaxing path to vertex V5 through V4
+> Old distance = 6
+> New distance = 1 (distance to V4 = 0, with hop to V5 = 1)
+Set distance[V5] = 1
+Set penultimate[V5] = V4
+
+Relaxing path to vertex V6 through V5
+> Old distance = inf
+> New distance = 10 (distance to V5 = 1, with hop to V6 = 9)
+Set distance[V6] = 10
+Set penultimate[V6] = V5
+
+Current solution matrix for source V4:
++----------+------------+---------------+
+| Vertex   |   Distance | Penultimate   |
++==========+============+===============+
+| V1       |        inf |               |
++----------+------------+---------------+
+| V2       |        inf |               |
++----------+------------+---------------+
+| V3       |          2 | V4            |
++----------+------------+---------------+
+| V4       |          0 | V4            |
++----------+------------+---------------+
+| V5       |          1 | V4            |
++----------+------------+---------------+
+| V6       |         10 | V5            |
++----------+------------+---------------+
+
+* End relaxation sweep 1 of 6
+
+* Begin relaxation sweep 2 of 6
+
+Relaxing path to vertex V2 through V3
+> Old distance = inf
+> New distance = 5 (distance to V3 = 2, with hop to V2 = 3)
+Set distance[V2] = 5
+Set penultimate[V2] = V3
+
+Relaxing path to vertex V1 through V2
+> Old distance = inf
+> New distance = 9 (distance to V2 = 5, with hop to V1 = 4)
+Set distance[V1] = 9
+Set penultimate[V1] = V2
+
+Current solution matrix for source V4:
++----------+------------+---------------+
+| Vertex   |   Distance | Penultimate   |
++==========+============+===============+
+| V1       |          9 | V2            |
++----------+------------+---------------+
+| V2       |          5 | V3            |
++----------+------------+---------------+
+| V3       |          2 | V4            |
++----------+------------+---------------+
+| V4       |          0 | V4            |
++----------+------------+---------------+
+| V5       |          1 | V4            |
++----------+------------+---------------+
+| V6       |         10 | V5            |
++----------+------------+---------------+
+
+* End relaxation sweep 2 of 6
+
+* Begin relaxation sweep 3 of 6
+
+No relaxations occurred during this sweep; Solution has probably stabilized.
+
+* End relaxation sweep 3 of 6
+
+* Begin relaxation sweep 4 of 6
+
+No relaxations occurred during this sweep; Solution has probably stabilized.
+
+* End relaxation sweep 4 of 6
+
+* Begin relaxation sweep 5 of 6
+
+No relaxations occurred during this sweep; Solution has probably stabilized.
+
+* End relaxation sweep 5 of 6
+
+* Begin relaxation sweep 6 of 6
+
+No relaxations occurred during this sweep; Solution has probably stabilized.
+
+* End relaxation sweep 6 of 6
+
+Done relaxing
+> 2 useful sweeps
+> 4 useless sweeps
+
+Final solution matrix for source V4:
++----------+------------+---------------+
+| Vertex   |   Distance | Penultimate   |
++==========+============+===============+
+| V1       |          9 | V2            |
++----------+------------+---------------+
+| V2       |          5 | V3            |
++----------+------------+---------------+
+| V3       |          2 | V4            |
++----------+------------+---------------+
+| V4       |          0 | V4            |
++----------+------------+---------------+
+| V5       |          1 | V4            |
++----------+------------+---------------+
+| V6       |         10 | V5            |
++----------+------------+---------------+
+
+Penultimate: {'V1': 'V2', 'V2': 'V3', 'V3': 'V4', 'V4': 'V4', 'V5': 'V4', 'V6': 'V5'}
+Distances: {'V1': 9, 'V2': 5, 'V3': 2, 'V4': 0, 'V5': 1, 'V6': 10}
+
+Random seed: 0.6570699111399786
+
+Thank you for playing
